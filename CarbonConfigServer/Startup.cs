@@ -36,7 +36,7 @@ namespace CarbonConfigServer
                 sp.GetRequiredService<IOptions<ConfigStoreDatabaseSettings>>().Value);
             
             services.AddSingleton<ConfigService>();
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options => options.UseMemberCasing());;
             
             services.AddSwaggerGen(c =>
             {

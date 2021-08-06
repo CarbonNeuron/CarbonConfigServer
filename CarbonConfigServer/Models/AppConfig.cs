@@ -17,7 +17,7 @@ namespace CarbonConfigServer.Models
         [BsonElement("AuthToken")] //Probably be a 256 character unique string
         public string AuthToken { get; set; }
 
-        public BsonDocument Config { get; set; }
+        public Dictionary<string, object> Config { get; set; }
         
         [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
         public DateTime LastSeen { get; set; }
