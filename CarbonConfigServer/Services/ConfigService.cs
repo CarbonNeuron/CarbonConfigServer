@@ -20,13 +20,12 @@ namespace CarbonConfigServer.Services
 
         public AppConfig Get(string id) =>
             _AppConfigs.Find<AppConfig>(config => config.Id == id).FirstOrDefault();
-
+        
         public AppConfig Create(AppConfig appConfig)
         {
             _AppConfigs.InsertOne(appConfig);
             return appConfig;
         }
-
         public void Update(string id, AppConfig AppConfigIn) =>
             _AppConfigs.ReplaceOne(appConfig => appConfig.Id == id, AppConfigIn);
 

@@ -14,8 +14,9 @@ namespace CarbonConfigServer.Models
         [BsonElement("AppName")]
         public string AppName { get; set; }
         
-        [BsonElement("AuthToken")] //Probably be a 256 character unique string
-        public string AuthToken { get; set; }
+        [BsonElement("AppToken")] //Probably be a 256 character unique string
+        public string AppToken { get; set; }
+        
 
         public Dictionary<string, object> Config { get; set; }
         
